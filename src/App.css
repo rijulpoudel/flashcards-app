@@ -2,10 +2,13 @@
   font-family: sans-serif;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
 button {
@@ -21,4 +24,38 @@ button {
 
 button:hover {
   background-color: #f0f0f0;
+}
+
+.input-box {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.input-box input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.nav-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.streaks {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.nav-buttons button {
+  margin-top: 10px;
 }

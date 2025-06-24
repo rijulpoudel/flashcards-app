@@ -1,55 +1,55 @@
-# Web Development Project 2 - Flashcards App
+# Web Development Project 3 - Smart Flashcards
 
 Submitted by: **Bimarsha Poudel**
 
-This web app: **lets users study using a set of flashcards with interactive flipping and random card selection. The app supports images and category-based styling for enhanced learning.**
+This web app: **lets users study flashcards by guessing answers, receiving feedback, navigating through the cards, and tracking streaks. It supports fuzzy matching, shuffling, and visual cues to make learning interactive and fun.**
 
-Time spent: **5** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The app displays the title of the card set, a short description, and the total number of cards**
-  - [x] Title of card set is displayed 
-  - [x] A short description of the card set is displayed 
-  - [x] A list of card pairs is created
-  - [x] The total number of cards in the set is displayed 
-  - [x] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
-- [x] **A single card at a time is displayed**
-  - [x] Only one half of the information pair is displayed at a time
-- [x] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
-  - [x] Clicking on a card flips it over, showing the back with corresponding information 
-  - [x] Clicking on a flipped card again flips it back, showing the front
-- [x] **Clicking on the next button displays a random new card**
+- [x] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - [x] Application features a clearly labeled input box with a submit button where users can type in a guess
+  - [x] Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong 
+  - [x] Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [x] **The user can navigate through an ordered list of cards**
+  - [x] A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - [x] A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - [x] Both the next and back buttons have a visual indication (grayed out) when the user is at the beginning or end of the list
 
-The following **optional** features are implemented:
+## Optional Features
 
-- [x] Cards contain images in addition to or in place of text
-  - [x] Some or all cards have images in place of or in addition to text
-- [x] Cards have different visual styles such as color based on their category
-  - Example categories you can use:
-    - Geography
-    - Math
-    - Tech
-    - Art
+- [x] Users can use a shuffle button to randomize the order of the cards
+  - [x] Cards remain in the same sequence unless the shuffle button is clicked 
+  - [x] Cards change to a new randomized sequence when shuffle is clicked
+- [x] A user’s answer may be counted as correct even when it is slightly different from the target answer
+  - [x] Answers are matched even when they have casing, punctuation, or spacing differences
+- [x] A counter displays the user’s current and longest streak of correct responses
+  - [x] Current streak increments with correct answers
+  - [x] Streak resets to 0 on incorrect guess
+  - [x] Longest streak updates if current exceeds previous record
 
-The following **additional** features are implemented:
+## Additional Features
 
-* [x] Flip animation using CSS for smooth transitions
-* [x] Responsive layout and styled button interactions
+- [x] Flip animation between front and back of the flashcard
+- [x] Cards support images and category-based color styles
+- [x] Responsive layout with clean spacing and mobile-friendly design
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
- [Click here to watch the walkthrough on Loom] (https://www.loom.com/share/996b061bdcc742a1ae6dd3ac9eb7fa07?sid=b8bc5a44-7cd9-4389-aa20-bb62c7f3adc2)
+Here's a walkthrough of implemented user stories:
+
+Video Link: https://www.loom.com/share/67956baed2ea48c4abeca2dd29eecdcf?sid=6bfbfabd-a2f0-4a9a-b5eb-2d490a0e91f9
+
+Video created with **Loom**
 
 ## Notes
 
-Some challenges I encountered:
-- CSS transform styles needed tweaking to make the flip animation work well on both sides.
-- Centering the card and button layout across screen sizes required layout tuning.
-- Handling image overflow inside the card required careful CSS styling.
+- One challenge was centering the layout and making sure it worked cleanly across screen sizes.
+- Fuzzy matching logic took careful string normalization to support punctuation and case-insensitive matches.
+- Managing multiple state variables (index, guess, streaks, shuffled list) required clear resets on navigation/shuffle to prevent bugs.
 
 ## License
 
